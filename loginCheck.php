@@ -1,6 +1,6 @@
 <?php
 session_start();
-$client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
+$client_id = getenv('CLIENT_ID');;
 $clientSecret = "0d7wkz2t92q9li70nwrmb3ynwxovdg";
 $redirect_uri = "https://salty-river-25659.herokuapp.com/loginCheck.php";
 if ($_GET['code']) {
@@ -20,7 +20,8 @@ if ($_GET['code']) {
         $_SESSION['token'] = $res->access_token;
     }
 
-    ?>
+?>
+
 <html>
 <head>
 <title>Home</title>
@@ -36,7 +37,6 @@ if ($_GET['code']) {
 		Streamer name: <input type="text" id="streamer_name">
 		<button onclick="myFunction()">Find</button>
 	</div>
-
 </body>
 </html>
 <?php
