@@ -1,8 +1,8 @@
 <?php
 session_start();
-$client_id = "el29q4wnati71q4nbturpdq1irvdmg";
-$clientSecret = "y84r5jiro4w20wmcra1ewfi333yo1t";
-$redirect_uri = "http://localhost:8081/streamlabs_demo/loginCheck.php";
+$client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
+$clientSecret = "0d7wkz2t92q9li70nwrmb3ynwxovdg";
+$redirect_uri = "https://salty-river-25659.herokuapp.com/streamlabs_demo/loginCheck.php";
 if ($_GET['code']) {
     $_SESSION['code'] = $_GET['code'];
     $_SESSION['scope'] = $_GET['scope'];
@@ -27,7 +27,7 @@ if ($_GET['code']) {
 <script type="text/javascript">
  function myFunction() {
 	 var x = document.getElementById("streamer_name").value;
-	 window.location.href = "http://localhost:8081/streamlabs_demo/homePage.php?streamer="+x;
+	 window.location.href = "https://salty-river-25659.herokuapp.com/streamlabs_demo/homePage.php?streamer="+x;
  }
 </script>
 </head>

@@ -3,9 +3,9 @@ if(isset($_SESSION))
     session_destroy();
 session_start();
 
-$client_id = "el29q4wnati71q4nbturpdq1irvdmg";
+$client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
 //$clientSecret = "y84r5jiro4w20wmcra1ewfi333yo1t";
-$redirect_uri = "http://localhost:8081/streamlabs_demo/loginCheck.php";
+$redirect_uri = "https://salty-river-25659.herokuapp.com/streamlabs_demo/loginCheck.php";
 //$response_type= "token";
 $scope= "user:read:broadcast";
 echo "About to hit URL";
