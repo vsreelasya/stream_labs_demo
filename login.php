@@ -5,7 +5,7 @@ session_start();
 
 $client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
 //$clientSecret = "y84r5jiro4w20wmcra1ewfi333yo1t";
-$redirect_uri = "https://salty-river-25659.herokuapp.com/streamlabs_demo/loginCheck.php";
+$redirect_uri = "https://salty-river-25659.herokuapp.com/loginCheck.php";
 //$response_type= "token";
 $scope= "user:read:broadcast";
 echo "About to hit URL";

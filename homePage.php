@@ -40,7 +40,7 @@ if (! empty($resToken->data)) {
     // ======Web Hook=======
     $client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
     $mode = "subscribe";
-    $callback_url = "https://salty-river-25659.herokuapp.com/streamlabs_demo/homePage.php";
+    $callback_url = "https://salty-river-25659.herokuapp.com/homePage.php";
     $lease_days = "10";
     $lease_seconds = $lease_days * 24 * 60 * 60;
 
