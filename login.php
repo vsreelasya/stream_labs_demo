@@ -2,8 +2,9 @@
 if(isset($_SESSION))
     session_destroy();
 session_start();
-$client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
-$redirect_uri = "https://salty-river-25659.herokuapp.com/loginCheck.php";
+
+$client_id = getenv('CLIENT_ID');
+$redirect_uri = getenv('REDIRECT_URI');
 $scope= "user:read:broadcast";
 
 $twitchLogin_url = "https://id.twitch.tv/oauth2/authorize"

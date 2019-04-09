@@ -37,15 +37,14 @@ curl_close($curl);
 $resToken = json_decode($resCurl);
 if (! empty($resToken->data)) {
     $target_user_id = $resToken->data[0]->id;
-    // ======Web Hook=======
-    $client_id = "sgttgmxx9y9evwlipkkh9nqzdd0zxt";
+
+// ======Web Hook=======
+    $client_id = getenv('CLIENT_ID');
     $mode = "subscribe";
     $callback_url = "https://salty-river-25659.herokuapp.com/homePage.php";
     $lease_days = "10";
     $lease_seconds = $lease_days * 24 * 60 * 60;
-
     $subscribe_to_event_url = "https://api.twitch.tv/helix/webhooks/hub";
-
     $data = array(
         'hub.mode' => $mode,
         'hub.topic' => "https://api.twitch.tv/helix/streams?user_id=" . $target_user_id,

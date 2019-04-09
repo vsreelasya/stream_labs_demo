@@ -1,8 +1,9 @@
 <?php
 session_start();
-$client_id = getenv('CLIENT_ID');;
-$clientSecret = "0d7wkz2t92q9li70nwrmb3ynwxovdg";
-$redirect_uri = "https://salty-river-25659.herokuapp.com/loginCheck.php";
+$client_id = getenv('CLIENT_ID');
+$clientSecret = getenv('CLIENT_SECRET');
+$redirect_uri = getenv('REDIRECT_URI');
+
 if ($_GET['code']) {
     $_SESSION['code'] = $_GET['code'];
     $_SESSION['scope'] = $_GET['scope'];
